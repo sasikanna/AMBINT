@@ -1,0 +1,2755 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#"
+     xml:base="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology">
+        <rdfs:comment>The ontology of the project AI-Read Outlet</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasBook -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasBook">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isBookof"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Shelf"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Book"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasCase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasCase">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isCaseof"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasDone -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasDone">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasPhone -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasPhone">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isPhoneof"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasSensor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasSensor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isSensorof"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasShelf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasShelf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#inRoom"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Room"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Shelf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#inRoom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#inRoom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Shelf"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Room"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isBookof -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isBookof">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Book"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Shelf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isCaseof -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isCaseof">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isConnected -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isConnected">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Room"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Room"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isPhoneof -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isPhoneof">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Sensor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isSensorof -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isSensorof">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#overlap -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#overlap">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Sensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasBookNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasBookNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Shelf"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasBoughtBook -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasBoughtBook">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasCode">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasColor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasColor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Shelf"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasDiscount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasDiscount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasPage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasPage">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasShelfNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasShelfNumber">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Room"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ActionBook -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ActionBook">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Book"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isBookof"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RedShelf"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasPage"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A book on Red Shelves</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Activity">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#overlap"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Sensor"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <rdfs:comment>Class of activity that can be done by a person</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#AdventureBook -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#AdventureBook">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Book"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isBookof"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlueShelf"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasPage"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A book on Blue Shelves</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackShelf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackShelf">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Shelf"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasBook"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NoirBook"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#inRoom"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MysteryLoveRoom"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasColor"/>
+                        <owl:hasValue>Black</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A Shelf that is black in the MysteryLove room and has NoirBook</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlueShelf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlueShelf">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Shelf"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasBook"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#AdventureBook"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#inRoom"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DieHardRoom"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasColor"/>
+                        <owl:hasValue>Blue</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A Shelf that is blue in the DieHard room and has AdventureBook</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Book -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Book">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isBookof"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Shelf"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasPage"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasSensor"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <rdfs:comment>Class of all books with RFIDAntenna sensor</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BuyBookActivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BuyBookActivity">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Activity"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#overlap"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Phone"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Buy a book overlapping RFIDAntenna sensor read by Phone</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CameraSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CameraSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isSensorof"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Class of Camera sensor place in some room</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isCaseof"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Shelf"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasSensor"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Room"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Sensor"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Shelf"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ComicBook -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ComicBook">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Book"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isBookof"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeShelf"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasPage"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A book on Orange Shelves</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DieHardRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DieHardRoom">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Room"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasShelf"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlueShelf"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RedShelf"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isConnected"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EntranceRoom"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasShelfNumber"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasShelfNumber"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A Room with Blue and Red Shelves, it is connected with Entrance room, it also has from 2 to 5 shelves</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DreamRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DreamRoom">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Room"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasShelf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#GreenShelf"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isConnected"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EntranceRoom"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasShelfNumber"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>a Room with Green Shelves, it is connected with Entrance room. It has 1 shelf</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EnteredActivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EnteredActivity">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Activity"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#overlap"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CameraSensor"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PIRSensor"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Entered in the outlet by overlapping PIDSensor or StereoCamera Sensor</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EntranceRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EntranceRoom">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Room"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasSensor"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CameraSensor"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isConnected"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DieHardRoom"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DreamRoom"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MysteryLoveRoom"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NinthArtRoom"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ScienceQueenRoom"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasShelfNumber"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A room with no shelves, is the one connected to all rooms. in this room there is PID sensor and StereoCamera sensor. Also a case to open for passing through rooms</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#FantasyBook -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#FantasyBook">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Book"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isBookof"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#GreenShelf"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasPage"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A book on Green Shelves</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#GreenShelf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#GreenShelf">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Shelf"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasBook"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#FantasyBook"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#inRoom"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DreamRoom"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasColor"/>
+                        <owl:hasValue>G</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A Shelf that is green in the Dream room and has FantasyBook</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#LoveStoryBook -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#LoveStoryBook">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Book"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isBookof"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkShelf"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasPage"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A book on Pink Shelves</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MangaBook -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MangaBook">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Book"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isBookof"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteShelf"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasPage"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A book on White Shelves</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MysteryLoveRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MysteryLoveRoom">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Room"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasShelf"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackShelf"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkShelf"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isConnected"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EntranceRoom"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasShelfNumber"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">6</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasShelfNumber"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">7</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A Room with Black and Pink Shelves, it is connected with Entrance room. It has from 6 to 7 shelves</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NinthArtRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NinthArtRoom">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Room"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasShelf"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeShelf"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteShelf"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isConnected"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EntranceRoom"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasShelfNumber"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">8</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasShelfNumber"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">9</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A Room with White and Orange Shelves, it is connected with Entrance room. It has from 8 to 9 shelves</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NoirBook -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NoirBook">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Book"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isBookof"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackShelf"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasPage"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A book on Black Shelves</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OpenCaseActivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OpenCaseActivity">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Activity"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#overlap"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Open the case by switching</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeShelf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeShelf">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Shelf"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasBook"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ComicBook"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#inRoom"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NinthArtRoom"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasColor"/>
+                        <owl:hasValue>O</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A Shelf that is orange in the NinthArt room and has ComicBook</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PIRSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PIRSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isSensorof"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EntranceRoom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <rdfs:comment>Sensor placed in the entrance room</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Person">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasDone"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Activity"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasPhone"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Phone"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasBoughtBook"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>class of person</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PhilosophicBook -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PhilosophicBook">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Book"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isBookof"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#YellowShelf"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasPage"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A book on Yellow Shelves</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Phone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Phone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CameraSensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isPhoneof"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#StereoCameraSensor"/>
+        <rdfs:comment>CameraSensor possesed by a person</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkShelf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkShelf">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Shelf"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasBook"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#LoveStoryBook"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#inRoom"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MysteryLoveRoom"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasColor"/>
+                        <owl:hasValue>P</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A Shelf that is pink in the MysteryLove room and has LoveStoryBook</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasCode"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isSensorof"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Book"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+        <rdfs:comment>RFIDAntenna placed in the books</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RedShelf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RedShelf">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Shelf"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasBook"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ActionBook"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#inRoom"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DieHardRoom"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasColor"/>
+                        <owl:hasValue>R</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A Shelf that is red in the DieHard room and has ActionBook</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Room -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Room">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasCase"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasShelf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Shelf"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isConnected"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Room"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasShelfNumber"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Class of rooms in the outlet</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ScienceQueenRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ScienceQueenRoom">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Room"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasShelf"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#YellowShelf"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isConnected"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EntranceRoom"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasShelfNumber"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>a Room with Yellow Shelves, it is connected with Entrance room. It has 1 shelf</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Sensor">
+        <rdfs:comment>class of sensor used</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Shelf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Shelf">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasBook"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Book"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasCase"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#inRoom"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Room"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasBookNumber"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasColor"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Class of shelves where books are on, and every shelves has a case</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#StereoCameraSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#StereoCameraSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CameraSensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isSensorof"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EntranceRoom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>StereoCamere placed in the entrance room</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#isSensorof"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Switch sensor placed in the case to see if it is opened or not</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteShelf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteShelf">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Shelf"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasBook"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MangaBook"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#inRoom"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NinthArtRoom"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasColor"/>
+                        <owl:hasValue>W</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A Shelf that is white in the NinthArt room and has MangaBook</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#YellowShelf -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#YellowShelf">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Shelf"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasBook"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PhilosophicBook"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#inRoom"/>
+                                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ScienceQueenRoom"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasColor"/>
+                        <owl:hasValue>Y</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>A Shelf that is yellow in the ScienceQueen room and has PhilosophicBook</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#AlabsterWhiteShelf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#AlabsterWhiteShelf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteShelf"/>
+        <hasBook rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OnePiece"/>
+        <hasCase rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteCase1"/>
+        <inRoom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NinthArtRoomGenova"/>
+        <hasBookNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasBookNumber>
+        <hasColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W</hasColor>
+        <rdfs:comment>Shelf colored in alabaster that has 1 book which is One Piece; the case is White and is in the Room of NinthArt in Genova</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#AssassinOnTheOrientExpress -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#AssassinOnTheOrientExpress">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NoirBook"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeNoir1"/>
+        <isBookof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EbonyBlackShelf"/>
+        <hasPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">216</hasPage>
+        <rdfs:comment>Book written by Aghata Christie, a noir with 216 pages placed on the ebony shelf. It is associated at the barcode noir 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeAct1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeAct1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <isSensorof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#HungerGames"/>
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">8144980218334</hasCode>
+        <rdfs:comment>barcode with 13 digits of Hunger Games</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeAct2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeAct2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <isSensorof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TheThreeMusketeers"/>
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">5213623294274</hasCode>
+        <rdfs:comment>barcode with 13 digits of The Three Musketeers</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeAdv -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeAdv">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <isSensorof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TheAdventuresOfTomSawyer"/>
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">2090732180367</hasCode>
+        <rdfs:comment>barcode with 13 digits of The Adventures of Tom Sawyer</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeCom1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeCom1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <isSensorof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Batman"/>
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">1783716373703</hasCode>
+        <rdfs:comment>barcode with 13 digits of Batman</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeCom2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeCom2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <isSensorof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DylanDog"/>
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">1471291910063</hasCode>
+        <rdfs:comment>barcode with 13 digits of Dylan Dog</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeCom3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeCom3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <isSensorof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#LaProfeziaDell&apos;Armadillo"/>
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">8379239316767</hasCode>
+        <rdfs:comment>barcode with 13 digits of La Porfezia dell&apos;Armadillo</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeCom4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeCom4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <isSensorof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Spiderman"/>
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">3454872616961</hasCode>
+        <rdfs:comment>barcode with 13 digits of Spiderman</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeFan1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeFan1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <isSensorof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#HarryPotter"/>
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">5996454627578</hasCode>
+        <rdfs:comment>barcode with 13 digits of Harry Potter</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeFan2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeFan2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <isSensorof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#LordOfTheRings"/>
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">2045994438698</hasCode>
+        <rdfs:comment>barcode with 13 digits of Lord of The Rings</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeLvStry1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeLvStry1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <isSensorof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TheDukeAndI"/>
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">3711984547979</hasCode>
+        <rdfs:comment>barcode with 13 digits of The Duke and I</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeLvStry2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeLvStry2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <isSensorof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TheNotebook"/>
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">5075241485379</hasCode>
+        <rdfs:comment>barcode with 13 digits of TheNotebook</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeLvStry3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeLvStry3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <isSensorof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PrideAndPrejudice"/>
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">9198297149759</hasCode>
+        <rdfs:comment>barcode with 13 digits of Pride and Prejudice</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeMan1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeMan1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <isSensorof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Berserk"/>
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">4633477190264</hasCode>
+        <rdfs:comment>barcode with 13 digits of Berserk</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeMan2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeMan2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">1467492576613</hasCode>
+        <rdfs:comment>barcode with 13 digits of DragonBall</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeMan3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeMan3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <isSensorof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Naruto"/>
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">2927390872874</hasCode>
+        <rdfs:comment>barcode with 13 digits of Naruto</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeMan4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeMan4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <isSensorof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OnePiece"/>
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">6325216720843</hasCode>
+        <rdfs:comment>barcode with 13 digits of One Piece</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeNoir1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeNoir1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <isSensorof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#AssassinOnTheOrientExpress"/>
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">8642988969305</hasCode>
+        <rdfs:comment>barcode with 13 digits of Assassin on the Orient Express</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeNoir2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeNoir2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <isSensorof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DaVinci&apos;sCode"/>
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">4324644877355</hasCode>
+        <rdfs:comment>barcode with 13 digits of Da Vinci&apos;s Code</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeNoir3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeNoir3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <isSensorof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TenLittleIndians"/>
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">8447937668315</hasCode>
+        <rdfs:comment>barcode with 13 digits of Ten Little Indians</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodePhi1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodePhi1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <isSensorof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CritiqueOfPureReason"/>
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">1891047692857</hasCode>
+        <rdfs:comment>barcode with 13 digits of Critique of Pure Reason</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodePhi2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodePhi2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RFIDantennaSensor"/>
+        <isSensorof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Symposium"/>
+        <hasCode rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">8939782872479</hasCode>
+        <rdfs:comment>barcode with 13 digits of Symposium</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Batman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Batman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ComicBook"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeCom1"/>
+        <isBookof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TigerOrangeShelf"/>
+        <hasPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">320</hasPage>
+        <rdfs:comment>Batman DC comic with 320 pages, placed in the tiger orange shelf.
+The barcode associated is the comic1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Berserk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Berserk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MangaBook"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeMan1"/>
+        <isBookof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SnowWhiteShelf"/>
+        <hasPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">224</hasPage>
+        <rdfs:comment>Berserk manga drawn by Kentaro Miura with 224 pages, placed on the snow white shelf. It is associated with barcode manga1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackCase1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackCase1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackSwitch1"/>
+        <isCaseof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EbonyBlackShelf"/>
+        <rdfs:comment>Case of ebony shelf with black switch sensor</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackCase2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackCase2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackSwitch2"/>
+        <isCaseof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RavenBlackShelf"/>
+        <rdfs:comment>Case of raven black shelf with black switch sensor</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackCase3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackCase3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackSwitch3"/>
+        <isCaseof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#InkBlackShelf"/>
+        <rdfs:comment>Case of ink black shelf with black switch sensor</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackSwitch1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackSwitch1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+        <rdfs:comment>Switch of the black case on ebony shelf</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackSwitch2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackSwitch2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+        <rdfs:comment>Switch of the black case on raven shelf</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackSwitch3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackSwitch3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+        <rdfs:comment>Switch of the black case on ink shelf</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlueCase -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlueCase">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlueSwitch"/>
+        <isCaseof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CobaltBlueShelf"/>
+        <rdfs:comment>Case of cobalt shelf with blue switch</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlueSwitch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlueSwitch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+        <rdfs:comment>Switch of blue case</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BuyNaruto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BuyNaruto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BuyBookActivity"/>
+        <overlap rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeMan3"/>
+        <rdfs:comment>Buying the Nauto  manga book overlapping barcode associated to it</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BuyOnePiece -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BuyOnePiece">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BuyBookActivity"/>
+        <overlap rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeMan4"/>
+        <rdfs:comment>Buying One Piece</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CanaryYellow -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CanaryYellow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#YellowShelf"/>
+        <hasBook rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CritiqueOfPureReason"/>
+        <hasBook rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Symposium"/>
+        <hasCase rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#YellowCase"/>
+        <inRoom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ScienceQueenRoomGenova"/>
+        <hasBookNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasBookNumber>
+        <hasColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Y</hasColor>
+        <rdfs:comment>Shelf colored in canary yellow that has 2 book which are Symposium and Critique of Pure Reason; the case is Yellow and is in the Room of ScienceQueen in Genova</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CobaltBlueShelf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CobaltBlueShelf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlueShelf"/>
+        <hasBook rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TheAdventuresOfTomSawyer"/>
+        <inRoom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DieHardRoomGenova"/>
+        <hasBookNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasBookNumber>
+        <hasColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue</hasColor>
+        <rdfs:comment>Shelf colored in cobalt that has 1 book which is The Adventures of Tom Sawyer; the case is Blue and is in the Room DieHard in Genova</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CoralPinkShelf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CoralPinkShelf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkShelf"/>
+        <hasBook rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TheDukeAndI"/>
+        <hasCase rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkCase1"/>
+        <inRoom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MysteryLoveRoomGenova"/>
+        <hasBookNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasBookNumber>
+        <hasColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P</hasColor>
+        <rdfs:comment>Shelf colored in coral that has 1 book which is The Duke and I; the case is Pink and is in the Room of Mystery and Love in Genova</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CreamWhiteShelf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CreamWhiteShelf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteShelf"/>
+        <hasBook rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Naruto"/>
+        <hasCase rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteCase2"/>
+        <inRoom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NinthArtRoomGenova"/>
+        <hasBookNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasBookNumber>
+        <hasColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W</hasColor>
+        <rdfs:comment>Shelf colored in cream white that has 1 book which is Naruto; the case is White and is in the Room of NinthArt in Genova</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CrimsonRed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CrimsonRed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RedShelf"/>
+        <hasBook rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#HungerGames"/>
+        <hasBook rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TheThreeMusketeers"/>
+        <hasCase rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RedCase"/>
+        <inRoom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DieHardRoomGenova"/>
+        <hasBookNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasBookNumber>
+        <hasColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">R</hasColor>
+        <rdfs:comment>Shelf colored in crimson that has 2 book which are Hunger Games and The Three Musketeers; the case is Red and is in the Room DieHard in Genova</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CritiqueOfPureReason -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CritiqueOfPureReason">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PhilosophicBook"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodePhi1"/>
+        <hasPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">258</hasPage>
+        <rdfs:comment>Book written by Immanuel Kant, a philosophic theory with 258 pages placed on the canary yellow shelf. It is associated at the barcode philosophy 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DieHardDoor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DieHardDoor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Switch"/>
+        <isCaseof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DieHardRoomGenova"/>
+        <rdfs:comment>Door of the Die Hard room</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DieHardRoomGenova -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DieHardRoomGenova">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DieHardRoom"/>
+        <hasShelf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CobaltBlueShelf"/>
+        <hasShelf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CrimsonRed"/>
+        <isConnected rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EntranceOutletGenova"/>
+        <hasShelfNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</hasShelfNumber>
+        <rdfs:comment>Room of the outlet connected with the Entrance. It has 2 shelves which are the cobalt and crimson one.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Door -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Door">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Switch"/>
+        <isCaseof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EntranceOutletGenova"/>
+        <rdfs:comment>This case is the door that is opened with the switch</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DragonBall -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DragonBall">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MangaBook"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeMan2"/>
+        <isBookof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PearlWhiteShelf"/>
+        <hasPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">338</hasPage>
+        <rdfs:comment>DragonBall manga drawn by Akira Toriyama with 338 pages, placed on the pearl white shelf. It is associated with barcode manga2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DreamDoor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DreamDoor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Switch"/>
+        <isCaseof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DreamRoomGenova"/>
+        <rdfs:comment>Door of the Dream Room</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DreamRoomGenova -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DreamRoomGenova">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DreamRoom"/>
+        <hasShelf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EmeraldGreenShelf"/>
+        <isConnected rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EntranceOutletGenova"/>
+        <hasShelfNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</hasShelfNumber>
+        <rdfs:comment>Room of the outlet connected with the Entrance. It has 1 shelf which is the emerald green one.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DylanDog -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DylanDog">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ComicBook"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeCom2"/>
+        <isBookof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#FireOrangeShelf"/>
+        <hasPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">160</hasPage>
+        <rdfs:comment>Italian comic with 160 pages, placed in the fire orange shelf.
+The barcode associated is the comic2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EbonyBlackShelf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EbonyBlackShelf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackShelf"/>
+        <inRoom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MysteryLoveRoomGenova"/>
+        <hasBookNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasBookNumber>
+        <hasColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black</hasColor>
+        <rdfs:comment>Shelf colored in ebony that has 1 book which is Assassin on the Orient Express; the case is Black and is in the Room Mystery and Love in Genova</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EmeraldGreenShelf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EmeraldGreenShelf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#GreenShelf"/>
+        <hasBook rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#HarryPotter"/>
+        <hasBook rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#LordOfTheRings"/>
+        <hasCase rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#GreenCase"/>
+        <inRoom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DreamRoomGenova"/>
+        <hasBookNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasBookNumber>
+        <hasColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G</hasColor>
+        <rdfs:comment>Shelf colored in emerald that has 2 books which are Harry Potter and Lord of The Rings; the case is Green and is in the Dream room in Genova</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EnteredShop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EnteredShop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EnteredActivity"/>
+        <overlap rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#pirsensor"/>
+        <rdfs:comment>Enter in the shop by overlapping pirsensor or stereo camera</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EntranceOutletGenova -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EntranceOutletGenova">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EntranceRoom"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#StereolabsZED"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#pirsensor"/>
+        <isConnected rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DieHardRoomGenova"/>
+        <isConnected rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DreamRoomGenova"/>
+        <isConnected rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MysteryLoveRoomGenova"/>
+        <isConnected rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NinthArtRoomGenova"/>
+        <isConnected rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ScienceQueenRoomGenova"/>
+        <hasShelfNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</hasShelfNumber>
+        <rdfs:comment>Entrance of the shop. It has pir sensor and stereo camera inside. A door is built in order to connect all the oher rooms with shelves, indeed the entrance has no shelf.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#FireOrangeShelf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#FireOrangeShelf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeShelf"/>
+        <hasCase rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeCase1"/>
+        <inRoom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NinthArtRoomGenova"/>
+        <hasBookNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasBookNumber>
+        <hasColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O</hasColor>
+        <rdfs:comment>Shelf colored in fire orange that has 1 book which is Dylan Dog; the case is Orange and is in the NinthArt room in Genova</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#FlamingoPinkShelf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#FlamingoPinkShelf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkShelf"/>
+        <hasBook rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TheNotebook"/>
+        <hasCase rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkCase2"/>
+        <inRoom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MysteryLoveRoomGenova"/>
+        <hasBookNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasBookNumber>
+        <hasColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P</hasColor>
+        <rdfs:comment>Shelf colored in flamingo pink that has 1 book which is The Notebook; the case is Pink and is in the Room Mystery and Love in Genova</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#GingerOrangeShelf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#GingerOrangeShelf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeShelf"/>
+        <hasBook rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#LaProfeziaDell&apos;Armadillo"/>
+        <hasCase rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeCase3"/>
+        <inRoom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NinthArtRoomGenova"/>
+        <hasBookNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasBookNumber>
+        <hasColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O</hasColor>
+        <rdfs:comment>Shelf colored in ginger orange that has 1 book which is La Profezia dell&apos;Armadillo; the case is Orange and is in the NinthArt room in Genova</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Giulia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Giulia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Person"/>
+        <hasDone rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EnteredShop"/>
+        <hasPhone rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Oppo"/>
+        <rdfs:comment>A Person that has a Oppo mobile for buying book but she is only entered in the shop</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#GreenCase -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#GreenCase">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#GreenSwitch"/>
+        <rdfs:comment>Case of emerald shelf with green switch</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#GreenSwitch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#GreenSwitch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+        <rdfs:comment>Switch of green case</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#HarryPotter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#HarryPotter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#FantasyBook"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeFan1"/>
+        <hasPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">310</hasPage>
+        <rdfs:comment>Book written by J.K Rowling, a fantasy saga with 310 pages placed on the emerald shelf. It is associated at the barcode fantasy 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#HungerGames -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#HungerGames">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ActionBook"/>
+        <hasPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">384</hasPage>
+        <rdfs:comment>Book written by Suzanne Collins, a teenager action with 384 pages placed on the crimson shelf. It is associated at the barcode action 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#InkBlackShelf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#InkBlackShelf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackShelf"/>
+        <hasBook rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TenLittleIndians"/>
+        <inRoom rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MysteryLoveRoomGenova"/>
+        <hasBookNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasBookNumber>
+        <hasColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black</hasColor>
+        <rdfs:comment>Shelf colored in ink black that has 1 book which is Ten Little Indians; the case is Black and is in the Room Mystery and Love in Genova</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#LordOfTheRings -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#LordOfTheRings">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#FantasyBook"/>
+        <hasPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1364</hasPage>
+        <rdfs:comment>Book written by J.R.R Tolkien, an epic fantasy with 1364 pages placed on the emerald shelf. It is associated at the barcode fantasy 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Marco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Marco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Person"/>
+        <hasDone rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BuyNaruto"/>
+        <hasDone rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BuyOnePiece"/>
+        <hasDone rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EnteredShop"/>
+        <hasDone rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OpenCase"/>
+        <hasDone rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BuyLaProfeziaDell&apos;Armadillo"/>
+        <hasPhone rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Xiaomi"/>
+        <hasBoughtBook rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasBoughtBook>
+        <rdfs:comment>Marco is a person that is entered in the shop, opened the case and buy Naruto manga book</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MysteryLoveDoor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MysteryLoveDoor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Switch"/>
+        <isCaseof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MysteryLoveRoomGenova"/>
+        <rdfs:comment>Door of the Mystery and Love room</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MysteryLoveRoomGenova -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MysteryLoveRoomGenova">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MysteryLoveRoom"/>
+        <hasShelf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CoralPinkShelf"/>
+        <hasShelf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EbonyBlackShelf"/>
+        <hasShelf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#FlamingoPinkShelf"/>
+        <hasShelf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#InkBlackShelf"/>
+        <hasShelf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RavenBlackShelf"/>
+        <hasShelf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WatermelonPinkShelf"/>
+        <isConnected rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EntranceOutletGenova"/>
+        <hasShelfNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</hasShelfNumber>
+        <rdfs:comment>Room of the outlet connected with the Entrance. It has 6 shelves which are the three different pink and three different black ones.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Naruto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Naruto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MangaBook"/>
+        <hasPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">192</hasPage>
+        <rdfs:comment>Naruto manga drawn by Masashi Kishimoto with 192 pages, placed on the cream white shelf. It is associated with barcode manga3</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NinthArtDoor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NinthArtDoor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Switch"/>
+        <isCaseof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NinthArtRoomGenova"/>
+        <rdfs:comment>Door of the Ninth art room</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NinthArtRoomGenova -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NinthArtRoomGenova">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NinthArtRoom"/>
+        <hasShelf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PearlWhiteShelf"/>
+        <hasShelf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SnowWhiteShelf"/>
+        <hasShelf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TangerineOrangeShelf"/>
+        <hasShelf rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TigerOrangeShelf"/>
+        <isConnected rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EntranceOutletGenova"/>
+        <hasShelfNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">8</hasShelfNumber>
+        <rdfs:comment>Room of the outlet connected with the Entrance. It has 8 shelves which are the four different white and four different orange ones.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OnePiece -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OnePiece">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MangaBook"/>
+        <hasPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">208</hasPage>
+        <rdfs:comment>Naruto manga drawn by Eiichiro Oda with 208 pages, placed on the alabaster white shelf. It is associated with barcode manga4</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OpenCase -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OpenCase">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OpenCaseActivity"/>
+        <overlap rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteSwitch2"/>
+        <rdfs:comment>Open the case of cream white shelf</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OpenDieHardRoom -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OpenDieHardRoom">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OpenCaseActivity"/>
+        <overlap rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Switch"/>
+        <rdfs:comment>open DieHard room by overlapping the Switch of the door</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Oppo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Oppo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Phone"/>
+        <isPhoneof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Giulia"/>
+        <rdfs:comment>Giulia&apos;s phone, used as reader of barcode</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeCase1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeCase1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeSwitch1"/>
+        <rdfs:comment>Orange case of fire orange shelf</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeCase2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeCase2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeSwitch2"/>
+        <isCaseof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TigerOrangeShelf"/>
+        <rdfs:comment>Orange case of tiger orange shelf</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeCase3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeCase3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeSwitch3"/>
+        <rdfs:comment>Orange case of ginger orange shelf</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeCase4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeCase4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeSwitch4"/>
+        <isCaseof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TangerineOrangeShelf"/>
+        <rdfs:comment>Orange case of tangerine orange shelf</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeSwitch1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeSwitch1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+        <rdfs:comment>Switch of case on fire orange shelf</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeSwitch2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeSwitch2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+        <rdfs:comment>Switch of case on tiger orange shelf</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeSwitch3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeSwitch3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+        <rdfs:comment>Switch of case on ginger orange shelf</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeSwitch4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeSwitch4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+        <rdfs:comment>Switch of case on tangerine orange shelf</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PearlWhiteShelf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PearlWhiteShelf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteShelf"/>
+        <hasCase rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteCase3"/>
+        <hasBookNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasBookNumber>
+        <hasColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W</hasColor>
+        <rdfs:comment>Shelf colored in pearl white that has 1 book which is DragonBall; the case is White and is in the Room of NinthArt in Genova</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkCase1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkCase1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkSwitch1"/>
+        <rdfs:comment>Case of coral pink shelf with pink switch</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkCase2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkCase2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkSwitch2"/>
+        <rdfs:comment>Case of flamigo pink shelf with pink switch</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkCase3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkCase3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkSwitch3"/>
+        <isCaseof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WatermelonPinkShelf"/>
+        <rdfs:comment>Case of watermelon pink shelf with pink switch</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkSwitch1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkSwitch1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+        <rdfs:comment>Switch of case on coral pink shelf</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkSwitch2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkSwitch2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+        <rdfs:comment>Switch of case on flamingo pink shelf</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkSwitch3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkSwitch3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+        <rdfs:comment>Switch of case on watermelon pink shelf</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PrideAndPrejudice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PrideAndPrejudice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#LoveStoryBook"/>
+        <isBookof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WatermelonPinkShelf"/>
+        <hasPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">419</hasPage>
+        <rdfs:comment>Book written by Jane Austen, a love story with 419 pages placed on the watermelon pink shelf. It is associated at the barcode love story 3</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RavenBlackShelf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RavenBlackShelf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackShelf"/>
+        <hasBookNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasBookNumber>
+        <hasColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black</hasColor>
+        <rdfs:comment>Shelf colored in raven black that has 1 book which is Da Vinci&apos;s Code; the case is Black and is in the Room Mystery and Love in Genova</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RedCase -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RedCase">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RedSwitch"/>
+        <rdfs:comment>Case of crimson red shelf with red switch</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RedSwitch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RedSwitch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+        <rdfs:comment>Switch of case on crimson red shelf</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ScienceQueenDoor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ScienceQueenDoor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Switch"/>
+        <isCaseof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ScienceQueenRoomGenova"/>
+        <rdfs:comment>Door of the Science Queen room</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ScienceQueenRoomGenova -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ScienceQueenRoomGenova">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ScienceQueenRoom"/>
+        <isConnected rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EntranceOutletGenova"/>
+        <hasShelfNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</hasShelfNumber>
+        <rdfs:comment>Room of the outlet connected with the Entrance. It has 1 shelf which is the canary yellow one.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SnowWhiteShelf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SnowWhiteShelf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteShelf"/>
+        <hasCase rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteCase4"/>
+        <hasBookNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasBookNumber>
+        <hasColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W</hasColor>
+        <rdfs:comment>Shelf colored in pearl white that has 1 book which is Berserk; the case is White and is in the Room of NinthArt in Genova</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Spiderman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Spiderman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ComicBook"/>
+        <isBookof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TangerineOrangeShelf"/>
+        <hasPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">190</hasPage>
+        <rdfs:comment>Spiderman Marvel comic with 190 pages, placed in the tangerine orange shelf.
+The barcode associated is the comic4</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#StereolabsZED -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#StereolabsZED">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#StereoCameraSensor"/>
+        <rdfs:comment>Stereo camera placed in the entrance room</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Switch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Switch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+        <rdfs:comment>Switch of the door</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Symposium -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Symposium">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PhilosophicBook"/>
+        <hasPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">108</hasPage>
+        <rdfs:comment>Book written by Platon, a philosophic convivium with 108 pages placed on the canary yellow shelf. It is associated at the barcode philosophy 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TangerineOrangeShelf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TangerineOrangeShelf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeShelf"/>
+        <hasBookNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasBookNumber>
+        <hasColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O</hasColor>
+        <rdfs:comment>Shelf colored in tangerine orange that has 1 book which is Spiderman; the case is Orange and is in the NinthArt room in Genova</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TenLittleIndians -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TenLittleIndians">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NoirBook"/>
+        <hasPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">229</hasPage>
+        <rdfs:comment>Book written by Aghata Christie, a thriller with 229 pages placed on the ink black shelf. It is associated at the barcode noir 3</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TheAdventuresOfTomSawyer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TheAdventuresOfTomSawyer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#AdventureBook"/>
+        <hasPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">221</hasPage>
+        <rdfs:comment>Book written by Mark Twain, a tale of adventures with 221 pages placed on the cobalt shelf. It is associated at the barcode adventure</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TheDukeAndI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TheDukeAndI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#LoveStoryBook"/>
+        <hasPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">341</hasPage>
+        <rdfs:comment>Book written by Julia Queen, a romantic story with 341 pages placed on the coral pink shelf. It is associated with barcode love story 1</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TheNotebook -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TheNotebook">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#LoveStoryBook"/>
+        <hasPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</hasPage>
+        <rdfs:comment>Book written by Nicholas Sparks, a romantic story with 200 pages placed on the flamingo pink shelf. It is associated with barcode love story 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TheThreeMusketeers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TheThreeMusketeers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ActionBook"/>
+        <hasPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">758</hasPage>
+        <rdfs:comment>Book written by Alexandre Dumas, an action story with 758 pages placed on the crimson shelf. It is associated with barcode action 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TigerOrangeShelf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#TigerOrangeShelf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeShelf"/>
+        <hasBookNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasBookNumber>
+        <hasColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O</hasColor>
+        <rdfs:comment>Shelf colored in tiger orange that has 1 book which is Batman; the case is Orange and is in the NinthArt room in Genova</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WatermelonPinkShelf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WatermelonPinkShelf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkShelf"/>
+        <hasBookNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasBookNumber>
+        <hasColor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P</hasColor>
+        <rdfs:comment>Shelf colored in watermelon pink that has 1 book which is Pride and Prejudice; the case is Pink and is in the Room Mystery and Love in Genova</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteCase1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteCase1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteSwitch1"/>
+        <rdfs:comment>Case of the alabaster white shelf with white switch</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteCase2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteCase2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteSwitch2"/>
+        <rdfs:comment>Case of the cream white shelf with white switch</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteCase3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteCase3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteSwitch3"/>
+        <rdfs:comment>Case of the pearl white shelf with white switch</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteCase4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteCase4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteSwitch4"/>
+        <rdfs:comment>Case of the snow white shelf with white switch</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteSwitch1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteSwitch1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+        <rdfs:comment>Switch of case on alabaster white shelf</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteSwitch2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteSwitch2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+        <rdfs:comment>Switch of case on cream white shelf</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteSwitch3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteSwitch3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+        <rdfs:comment>Switch of case on pearl white shelf</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteSwitch4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteSwitch4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+        <rdfs:comment>Switch of case on snow white shelf</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Xiaomi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Xiaomi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Phone"/>
+        <isPhoneof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Marco"/>
+        <rdfs:comment>Marco&apos;s phone, used as reader of barcode</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#YellowCase -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#YellowCase">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Case"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#YellowSwitch"/>
+        <rdfs:comment>Case of canary yellow shelf with yellow switch</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#YellowSwitch -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#YellowSwitch">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+        <rdfs:comment>Switch sensor of case on canary yellow shelf</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#pirsensor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#pirsensor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PIRSensor"/>
+        <rdfs:comment>presence sensor on the entrance room</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BuyLaProfeziaDell&apos;Armadillo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BuyLaProfeziaDell&apos;Armadillo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BuyBookActivity"/>
+        <overlap rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeCom3"/>
+        <rdfs:comment>Buying Zerocalcare&apos; comic book</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DaVinci&apos;sCode -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#DaVinci&apos;sCode">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NoirBook"/>
+        <hasSensor rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BarCodeNoir2"/>
+        <isBookof rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RavenBlackShelf"/>
+        <hasPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">512</hasPage>
+        <rdfs:comment>Book written by Dan Brown, a detective thrilelr with 512 pages placed on the raven shelf. It is associated at the barcode noir 2</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#LaProfeziaDell&apos;Armadillo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#LaProfeziaDell&apos;Armadillo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ComicBook"/>
+        <hasPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int">160</hasPage>
+        <rdfs:comment>Italian comic written by Zerocalcare with 160 pages placed on the ginger orange shelf. It is associated at the barcode comic 3</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ActionBook"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#AdventureBook"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#ComicBook"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#FantasyBook"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#LoveStoryBook"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#MangaBook"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#NoirBook"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PhilosophicBook"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Activity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Book"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Person"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Room"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Sensor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Shelf"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlackShelf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BlueShelf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#GreenShelf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OrangeShelf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PinkShelf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#RedShelf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#WhiteShelf"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#YellowShelf"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#BuyBookActivity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#EnteredActivity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#OpenCaseActivity"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#CameraSensor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#PIRSensor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#SwitchSensor"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#p">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#nb">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discount if you buy more than 2 books</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discount</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#Person"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#p"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasBoughtBook"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#p"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#nb"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#nb"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#hasDiscount"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/mstai/ontologies/2021/11/AI-Read_Outlet_Ontology#p"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
